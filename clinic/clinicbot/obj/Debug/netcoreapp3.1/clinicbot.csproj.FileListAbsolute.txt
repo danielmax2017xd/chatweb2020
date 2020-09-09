@@ -182,3 +182,11 @@ C:\Users\DANIEL\Desktop\PROYECTO COVID\corona\clinicabot2\clinic\clinicbot\bin\D
 C:\Users\DANIEL\Desktop\PROYECTO COVID\corona\clinicabot2\clinic\clinicbot\obj\Debug\netcoreapp3.1\clinicbot.csproj.CoreCompileInputs.cache
 C:\Users\DANIEL\Desktop\PROYECTO COVID\corona\clinicabot2\clinic\clinicbot\obj\Debug\netcoreapp3.1\clinicbot.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\DANIEL\Desktop\PROYECTO COVID\corona\clinicabot2\clinic\clinicbot\obj\Debug\netcoreapp3.1\clinicbot.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\DANIEL\Documents\GitHub\chatweb2020\clinic\clinicbot\obj\Debug\netcoreapp3.1\clinicbot.csprojAssemblyReference.cache
+C:\Users\DANIEL\Documents\GitHub\chatweb2020\clinic\clinicbot\obj\Debug\netcoreapp3.1\clinicbot.AssemblyInfoInputs.cache
+C:\Users\DANIEL\Documents\GitHub\chatweb2020\clinic\clinicbot\obj\Debug\netcoreapp3.1\clinicbot.AssemblyInfo.cs
+C:\Users\DANIEL\Documents\GitHub\chatweb2020\clinic\clinicbot\obj\Debug\netcoreapp3.1\clinicbot.csproj.CoreCompileInputs.cache
+C:\Users\DANIEL\Documents\GitHub\chatweb2020\clinic\clinicbot\obj\Debug\netcoreapp3.1\clinicbot.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\DANIEL\Documents\GitHub\chatweb2020\clinic\clinicbot\obj\Debug\netcoreapp3.1\clinicbot.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\DANIEL\Documents\GitHub\chatweb2020\clinic\clinicbot\obj\Debug\netcoreapp3.1\clinicbot.dll
+C:\Users\DANIEL\Documents\GitHub\chatweb2020\clinic\clinicbot\obj\Debug\netcoreapp3.1\clinicbot.pdb
