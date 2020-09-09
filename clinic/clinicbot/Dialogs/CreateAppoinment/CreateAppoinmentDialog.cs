@@ -105,7 +105,7 @@ namespace clinicbot.Dialogs.CreateAppoinment
             else
             {
                 var fullNameUser = stepContext.Context.Activity.Text;
-                
+                newUserModel.fullName = fullNameUser;
 
                 return await stepContext.PromptAsync(
                      nameof(TextPrompt),
