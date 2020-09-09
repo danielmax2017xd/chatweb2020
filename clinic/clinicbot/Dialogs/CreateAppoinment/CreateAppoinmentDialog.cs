@@ -140,7 +140,7 @@ namespace clinicbot.Dialogs.CreateAppoinment
             }
             else
             {
-                string text = $" Genial {fullNameUser} Ahora necesito la fecha de la cita medica con el siguiente formato" +
+                string text = $" Genial  Ahora necesito la fecha de la cita medica con el siguiente formato" +
                $"{Environment.NewLine}dd//mm/yyyy";
 
                 return await stepContext.PromptAsync(
@@ -258,9 +258,9 @@ namespace clinicbot.Dialogs.CreateAppoinment
             $"<br> "+
              $"  <br> En  VIDACOVID   estamos atentos y comprometidos para vivir al máximo el elemento más importante de nuestra cultura: “Las personas van primero”.Cuenten con nosotros para enfrentar este difícil momento. " +
              $" <br>  " +
-              $"<br> Ayudame entrando al link para sacarte un analisis " 
-             < a href = "https://9di.es/yyzlqjde" > CLICK AQUI</ a >
-                       $"<br> " +
+              $"<br> Ayudame entrando al link para sacarte un analisis " +
+           
+                        $"<br> " +
                       $"<br> " +
                 $"<br>Cordialmente" +
                  $"<br> " +
@@ -276,6 +276,7 @@ namespace clinicbot.Dialogs.CreateAppoinment
                 "",
                 contentEmail
                 );
+
         }
 
         private Activity CreateButtonConfirmation()
