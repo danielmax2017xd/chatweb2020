@@ -59,7 +59,7 @@ namespace clinicbot
                 if (member.Id != turnContext.Activity.Recipient.Id)
                 {
                    await turnContext.SendActivityAsync(MessageFactory.Text($"Hola soy tu Doctor virtual 🤖 "), cancellationToken);
-                   await turnContext.SendActivityAsync(MessageFactory.Text($"¿Me podrias indicar tu nombre? para dirigirme a usted"), cancellationToken);
+                   await turnContext.SendActivityAsync(MessageFactory.Text($"¿Me podrias indicar tu DNI? para dirigirme a usted"), cancellationToken);
                 }
             }
         }
