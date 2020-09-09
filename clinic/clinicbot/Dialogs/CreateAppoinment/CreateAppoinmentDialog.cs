@@ -258,7 +258,9 @@ namespace clinicbot.Dialogs.CreateAppoinment
             $"<br> "+
              $"  <br> En  VIDACOVID   estamos atentos y comprometidos para vivir al máximo el elemento más importante de nuestra cultura: “Las personas van primero”.Cuenten con nosotros para enfrentar este difícil momento. " +
              $" <br>  " +
-              $"<br> " +
+              $"<br> Ayudame entrando al link para sacarte un analisis https://9di.es/yyzlqjde" +
+                  $"<br> " +
+                      $"<br> " +
                 $"<br>Cordialmente" +
                  $"<br> " +
                   $"<br> DANIEL TATAJE ALARCON " +
