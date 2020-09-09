@@ -121,7 +121,7 @@ namespace clinicbot.Dialogs.CreateAppoinment
         private async Task<DialogTurnResult> SetDate(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             var fullNameUser = stepContext.Context.Activity.Text;
-            newUserModel.fullName = fullNameUser;
+          //  newUserModel.fullName = fullNameUser;
 
 
             var userEmail = stepContext.Context.Activity.Text;
