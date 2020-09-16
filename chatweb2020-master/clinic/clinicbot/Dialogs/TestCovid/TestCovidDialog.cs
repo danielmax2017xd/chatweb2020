@@ -137,7 +137,7 @@ namespace clinicbot.Dialogs.TestCovid
         {
             var userOption = stepContext.Context.Activity.Text.Trim().ToLower();
 
-            if (userOption.Equals("suave") || userOption.Equals("fuerte") || userOption.Equals("ninguno"))
+            if (userOption.Equals("level") || userOption.Equals("fuerte") || userOption.Equals("ninguno"))
             {
                 Intensidad = stepContext.Context.Activity.Text.Trim();
                 string text = "¿Recientemente ha estado en contacto con alguna persona infectada o en contacto con mucha gente?";
@@ -180,7 +180,7 @@ namespace clinicbot.Dialogs.TestCovid
                     $"{Environment.NewLine}Síntomas: {Sintomas}" +
                     $"{Environment.NewLine}Intensidad: {Intensidad}" +
                     $"{Environment.NewLine}Contacto: {Contacto}" +
-                    $"{Environment.NewLine}Es probable que tengas COVID-19, por favor acude a un centro médico para que te hagan la prueba molecular y recibir la información de profesionales. Sigue respetando el aislamiento.";
+                    $"{Environment.NewLine}";
                 await stepContext.Context.SendActivityAsync(messageFinal, cancellationToken: cancellationToken);
                 await Task.Delay(1500);
                 string LastMessage = "Lo más probable es que no tengas COVID-19 por no presentar síntomas claros. No te preocupes que todo saldrá bien. Suerte.";
@@ -229,7 +229,7 @@ namespace clinicbot.Dialogs.TestCovid
             {
                 Actions = new List<CardAction>()
                 {
-                    new CardAction(){ Title="Suave",Value="Suave", Type=ActionTypes.ImBack},
+                    new CardAction(){ Title="level",Value="Level", Type=ActionTypes.ImBack},
                     new CardAction(){ Title="Fuerte",Value="Fuerte", Type=ActionTypes.ImBack}
                 }
             };

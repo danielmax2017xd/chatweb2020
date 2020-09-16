@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d9gW85kF+sndFaX5dvPq7TARueHa8FU3RnSUWFEALeD52DrR08mpwYM5FivrmZqrCdP5VbNtPKquyX+UZeaCBw==",
+  "dgSpecHash": "gwuRtCC/5Mch7fXtc/OVJXYptSIlCNRYAdgskjflh801chiGJolJDFmsKMyyckTJYmKaawgvAwd/u3KQYwKEMw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DANIEL\\Desktop\\chatweb2020-master\\clinic\\clinicbot\\clinicbot.csproj",
+  "projectFilePath": "C:\\Users\\DANIEL\\Documents\\GitHub\\chatweb2020\\chatweb2020-master\\clinic\\clinicbot\\clinicbot.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DANIEL\\.nuget\\packages\\adaptiveexpressions\\4.10.0\\adaptiveexpressions.4.10.0.nupkg.sha512",
     "C:\\Users\\DANIEL\\.nuget\\packages\\antlr4.runtime\\4.6.6\\antlr4.runtime.4.6.6.nupkg.sha512",

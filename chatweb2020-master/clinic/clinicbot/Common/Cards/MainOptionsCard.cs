@@ -19,6 +19,18 @@ namespace clinicbot.Common.Cards
         }
         private static Activity CreatoCarousel()
         {
+            var cardTestCovid = new HeroCard
+            {
+                Title = "Test Covid",
+                Subtitle = "opciones",
+                Images = new List<CardImage> { new CardImage("https://clinicbotstorage1.blob.core.windows.net/images/online-doctor-with-computer_23-2148525681.jpg") },
+                Buttons = new List<CardAction>()
+                {
+                    new CardAction()  {Title="Test Virtual" , Value = "Test Virtual", Type=ActionTypes.ImBack},
+                    // new CardAction()  {Title="Ver mi cita" , Value = "Ver mi cita", Type=ActionTypes.ImBack},
+
+                }
+            };
             var cardCitaMedica = new HeroCard
             {
                 Title = "Citas Medicas",
@@ -44,6 +56,7 @@ namespace clinicbot.Common.Cards
 
                 }
             };
+        
             var cardSiguenosRedes = new HeroCard
             {
                 Title = "Siguenos en redes",
@@ -71,8 +84,10 @@ namespace clinicbot.Common.Cards
             };
             var optionsAttachments = new List<Attachment>()
             {
+                cardTestCovid.ToAttachment(),
               cardCitaMedica.ToAttachment(),
               cardInformacionContacto.ToAttachment(),
+           
               cardSiguenosRedes.ToAttachment(),
               cardCalificacion.ToAttachment(),
 
