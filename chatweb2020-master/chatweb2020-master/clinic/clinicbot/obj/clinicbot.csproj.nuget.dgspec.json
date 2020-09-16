@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DANIEL\\Desktop\\chatweb2020-master\\chatweb2020-master\\chatweb2020-master\\clinic\\clinicbot\\clinicbot.csproj": {}
+    "C:\\Users\\DANIEL\\Documents\\GitHub\\chatweb2020\\chatweb2020-master\\chatweb2020-master\\clinic\\clinicbot\\clinicbot.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DANIEL\\Desktop\\chatweb2020-master\\chatweb2020-master\\chatweb2020-master\\clinic\\clinicbot\\clinicbot.csproj": {
+    "C:\\Users\\DANIEL\\Documents\\GitHub\\chatweb2020\\chatweb2020-master\\chatweb2020-master\\clinic\\clinicbot\\clinicbot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DANIEL\\Desktop\\chatweb2020-master\\chatweb2020-master\\chatweb2020-master\\clinic\\clinicbot\\clinicbot.csproj",
+        "projectUniqueName": "C:\\Users\\DANIEL\\Documents\\GitHub\\chatweb2020\\chatweb2020-master\\chatweb2020-master\\clinic\\clinicbot\\clinicbot.csproj",
         "projectName": "clinicbot",
-        "projectPath": "C:\\Users\\DANIEL\\Desktop\\chatweb2020-master\\chatweb2020-master\\chatweb2020-master\\clinic\\clinicbot\\clinicbot.csproj",
+        "projectPath": "C:\\Users\\DANIEL\\Documents\\GitHub\\chatweb2020\\chatweb2020-master\\chatweb2020-master\\clinic\\clinicbot\\clinicbot.csproj",
         "packagesPath": "C:\\Users\\DANIEL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DANIEL\\Desktop\\chatweb2020-master\\chatweb2020-master\\chatweb2020-master\\clinic\\clinicbot\\obj\\",
+        "outputPath": "C:\\Users\\DANIEL\\Documents\\GitHub\\chatweb2020\\chatweb2020-master\\chatweb2020-master\\clinic\\clinicbot\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
