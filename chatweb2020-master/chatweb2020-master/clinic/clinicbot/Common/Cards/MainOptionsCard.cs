@@ -23,7 +23,7 @@ namespace clinicbot.Common.Cards
             {
                 Title = "Casos COVID-19",
                 Subtitle = "opciones",
-                Images = new List<CardImage> { new CardImage("https://clinicbotstorage1.blob.core.windows.net/images/online-doctor-with-computer_23-2148525681.jpg") },
+                Images = new List<CardImage> { new CardImage("https://clinicbotstorage1.blob.core.windows.net/images/peru-flag-made-metallic-brush-paint-grunge-dark-wall_1379-2558.jpg") },
                 Buttons = new List<CardAction>()
                 {
                      new CardAction()  {Title="Total casos" , Value = "Total casos covid", Type=ActionTypes.ImBack},
@@ -101,7 +101,6 @@ namespace clinicbot.Common.Cards
                 cardTestCovid.ToAttachment(),
                 cardCitaMedica.ToAttachment(),
                 cardInformacionContacto.ToAttachment(),
-           
                 cardSiguenosRedes.ToAttachment(),
                 cardCalificacion.ToAttachment(),
 
