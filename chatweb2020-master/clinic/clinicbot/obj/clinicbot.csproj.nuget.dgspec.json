@@ -1,24 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\YUDNER\\Desktop\\chatweb2020-master\\clinic\\clinicbot\\clinicbot.csproj": {}
+    "C:\\Users\\DANIEL\\Documents\\GitHub\\chatweb2020\\chatweb2020-master\\clinic\\clinicbot\\clinicbot.csproj": {}
   },
   "projects": {
-    "C:\\Users\\YUDNER\\Desktop\\chatweb2020-master\\clinic\\clinicbot\\clinicbot.csproj": {
+    "C:\\Users\\DANIEL\\Documents\\GitHub\\chatweb2020\\chatweb2020-master\\clinic\\clinicbot\\clinicbot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\YUDNER\\Desktop\\chatweb2020-master\\clinic\\clinicbot\\clinicbot.csproj",
+        "projectUniqueName": "C:\\Users\\DANIEL\\Documents\\GitHub\\chatweb2020\\chatweb2020-master\\clinic\\clinicbot\\clinicbot.csproj",
         "projectName": "clinicbot",
-        "projectPath": "C:\\Users\\YUDNER\\Desktop\\chatweb2020-master\\clinic\\clinicbot\\clinicbot.csproj",
-        "packagesPath": "C:\\Users\\YUDNER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\YUDNER\\Desktop\\chatweb2020-master\\clinic\\clinicbot\\obj\\",
+        "projectPath": "C:\\Users\\DANIEL\\Documents\\GitHub\\chatweb2020\\chatweb2020-master\\clinic\\clinicbot\\clinicbot.csproj",
+        "packagesPath": "C:\\Users\\DANIEL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DANIEL\\Documents\\GitHub\\chatweb2020\\chatweb2020-master\\clinic\\clinicbot\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\YUDNER\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\DANIEL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -96,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

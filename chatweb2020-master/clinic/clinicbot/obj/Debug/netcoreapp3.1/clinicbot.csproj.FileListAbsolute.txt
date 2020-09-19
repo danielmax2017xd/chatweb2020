@@ -809,3 +809,4 @@ C:\Users\YUDNER\Desktop\chatweb2020-master\clinic\clinicbot\obj\Debug\netcoreapp
 C:\Users\YUDNER\Desktop\chatweb2020-master\clinic\clinicbot\obj\Debug\netcoreapp3.1\clinicbot.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\YUDNER\Desktop\chatweb2020-master\clinic\clinicbot\obj\Debug\netcoreapp3.1\clinicbot.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\YUDNER\Desktop\chatweb2020-master\clinic\clinicbot\bin\Debug\netcoreapp3.1\Twilio.dll
+C:\Users\DANIEL\Documents\GitHub\chatweb2020\chatweb2020-master\clinic\clinicbot\bin\Debug\netcoreapp3.1\Twilio.dll
