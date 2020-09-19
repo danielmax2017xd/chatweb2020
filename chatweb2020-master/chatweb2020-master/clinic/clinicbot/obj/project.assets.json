@@ -2768,6 +2768,21 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Twilio/5.47.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Tokens": "5.3.0",
+          "Newtonsoft.Json": "11.0.2",
+          "System.Collections.Specialized": "4.3.0",
+          "System.IdentityModel.Tokens.Jwt": "5.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Twilio.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Twilio.dll": {}
+        }
       }
     }
   },
@@ -8990,6 +9005,25 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "Twilio/5.47.0": {
+      "sha512": "ExHcexMY5H+Qtdk6MnXfPapTNOpmW5FDmQHMImMTo+GUfjfKabBDbB/bkODJOXTbBFKbKeYHLHefm2aeJnArVA==",
+      "type": "package",
+      "path": "twilio/5.47.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/Twilio.dll",
+        "lib/net35/Twilio.xml",
+        "lib/net451/Twilio.dll",
+        "lib/net451/Twilio.xml",
+        "lib/netstandard1.4/Twilio.dll",
+        "lib/netstandard1.4/Twilio.xml",
+        "lib/netstandard2.0/Twilio.dll",
+        "lib/netstandard2.0/Twilio.xml",
+        "twilio.5.47.0.nupkg.sha512",
+        "twilio.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -9001,7 +9035,8 @@
       "Microsoft.Bot.Builder.Dialogs >= 4.10.0",
       "Microsoft.Bot.Builder.Integration.AspNet.Core >= 4.9.2",
       "Microsoft.EntityFrameworkCore.Cosmos >= 3.1.7",
-      "SendGrid >= 9.21.0"
+      "SendGrid >= 9.21.0",
+      "Twilio >= 5.47.0"
     ]
   },
   "packageFolders": {
@@ -9011,11 +9046,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DANIEL\\Documents\\GitHub\\chatweb2020\\chatweb2020-master\\chatweb2020-master\\clinic\\clinicbot\\clinicbot.csproj",
+      "projectUniqueName": "C:\\Users\\DANIEL\\Desktop\\chatweb2020-master\\clinic\\clinicbot\\clinicbot.csproj",
       "projectName": "clinicbot",
-      "projectPath": "C:\\Users\\DANIEL\\Documents\\GitHub\\chatweb2020\\chatweb2020-master\\chatweb2020-master\\clinic\\clinicbot\\clinicbot.csproj",
+      "projectPath": "C:\\Users\\DANIEL\\Desktop\\chatweb2020-master\\clinic\\clinicbot\\clinicbot.csproj",
       "packagesPath": "C:\\Users\\DANIEL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DANIEL\\Documents\\GitHub\\chatweb2020\\chatweb2020-master\\chatweb2020-master\\clinic\\clinicbot\\obj\\",
+      "outputPath": "C:\\Users\\DANIEL\\Desktop\\chatweb2020-master\\clinic\\clinicbot\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -9077,6 +9112,10 @@
           "SendGrid": {
             "target": "Package",
             "version": "[9.21.0, )"
+          },
+          "Twilio": {
+            "target": "Package",
+            "version": "[5.47.0, )"
           }
         },
         "imports": [

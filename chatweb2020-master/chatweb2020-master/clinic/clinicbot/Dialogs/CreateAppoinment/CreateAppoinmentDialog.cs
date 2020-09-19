@@ -5,6 +5,7 @@ using clinicbot.Common.Models.User;
 using clinicbot.Data;
 using clinicbot.infrastructura.Luis;
 using clinicbot.infrastructura.SendGridEmail;
+using clinicbot.Services.TwilioSMS;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Schema;
@@ -23,17 +24,19 @@ namespace clinicbot.Dialogs.CreateAppoinment
         public static UserModel newUserModel = new UserModel();
         public static MedicalAppointmentModel medicalAppointmentModel = new MedicalAppointmentModel();
         private readonly ISendGridEmailService _sendGridEmailService;
+        private readonly ITwilioSMSService _twilioSMSService;
 
         private readonly IStatePropertyAccessor<BotStateModel> _userState;
         static string userText;
         private readonly ILuisService _luisService;
 
-        public CreateAppoinmentDialog(IDataBaseService dataBaseService , UserState userState , ISendGridEmailService sendGridEmailService , ILuisService luisService)
+        public CreateAppoinmentDialog(IDataBaseService dataBaseService , UserState userState , ISendGridEmailService sendGridEmailService, ILuisService luisService, ITwilioSMSService twilioSMSService)
         {
             _luisService = luisService;
             _sendGridEmailService = sendGridEmailService;
             _userState = userState.CreateProperty<BotStateModel>(nameof(BotStateModel));
             _dataBaseService = dataBaseService;
+            _twilioSMSService = twilioSMSService;
             var waterfallStep = new WaterfallStep[]
                 {
                     SetPhone,
@@ -50,9 +53,6 @@ namespace clinicbot.Dialogs.CreateAppoinment
             AddDialog(new TextPrompt(nameof(TextPrompt)));
 
         }
-
-
-     
 
         private async Task<DialogTurnResult> SetPhone(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
@@ -109,7 +109,7 @@ namespace clinicbot.Dialogs.CreateAppoinment
 
                 return await stepContext.PromptAsync(
                      nameof(TextPrompt),
-                    new PromptOptions { Prompt = MessageFactory.Text($"Genial ,  Ahora indicame tu Correo") },
+                    new PromptOptions { Prompt = MessageFactory.Text($"Genial, ahora indícame tu Correo") },
                     //    Prompt = MessageFactory.Text($"Genial{name} ,  Ahora ingresa tu Correo"),
 
                     cancellationToken
@@ -140,7 +140,7 @@ namespace clinicbot.Dialogs.CreateAppoinment
             }
             else
             {
-                string text = $" Genial  Ahora necesito la fecha de la cita medica con el siguiente formato" +
+                string text = $" Genial , ahora necesito la fecha de la cita médica con el siguiente formato" +
                $"{Environment.NewLine}dd//mm/yyyy";
 
                 return await stepContext.PromptAsync(
@@ -157,8 +157,11 @@ namespace clinicbot.Dialogs.CreateAppoinment
 
             if(medicalAppointmentModel.date == DateTime.MinValue)
             {
+                
                 var medicalDate = stepContext.Context.Activity.Text;
-                medicalAppointmentModel.date = Convert.ToDateTime(medicalDate);
+                var fechaFormat = medicalDate.Split("/");
+                //medicalAppointmentModel.date = Convert.ToDateTime(medicalDate);
+                medicalAppointmentModel.date = new DateTime(int.Parse(fechaFormat[2].Trim()),int.Parse(fechaFormat[1].Trim()), int.Parse(fechaFormat[0].Trim())); ;
             }
 
            
@@ -225,17 +228,14 @@ namespace clinicbot.Dialogs.CreateAppoinment
                      $"{Environment.NewLine}⏰ Hora:{ medicalAppointmentModel.time}";
                 await stepContext.Context.SendActivityAsync(summaryMedical, cancellationToken:cancellationToken);
                 //SEND EMAIL
-                await SendEmail(userModel,medicalAppointmentModel);
+                await SendEmail(userModel, medicalAppointmentModel);
+                await SendSMS(userModel, medicalAppointmentModel);
 
 
                 await Task.Delay(1000);
-                await stepContext.Context.SendActivityAsync("¿En qué  más puedo ayudarte ?",cancellationToken:cancellationToken);
+                await stepContext.Context.SendActivityAsync("¿En qué más puedo ayudarte ?",cancellationToken:cancellationToken);
 
                 medicalAppointmentModel = new MedicalAppointmentModel();
-
-
-
-
             }
             else
             {
@@ -243,6 +243,15 @@ namespace clinicbot.Dialogs.CreateAppoinment
 
             }
             return await stepContext.ContinueDialogAsync(cancellationToken: cancellationToken);
+        }
+
+        private async Task SendSMS(UserModel userModel, MedicalAppointmentModel medicalAppointmentModel)
+        {
+            string message = $"{userModel.fullName}, su cita ha sido registrado para:" +
+                $"{Environment.NewLine}Fecha: {medicalAppointmentModel.date.ToString("dd/MM/yyyy")}" +
+                $"{Environment.NewLine}Hora: {medicalAppointmentModel.time}";
+
+            await _twilioSMSService.SendMessage(message, userModel.phone);
         }
 
         private async Task SendEmail(UserModel userModel, MedicalAppointmentModel medicalAppointmentModel)
@@ -280,7 +289,7 @@ namespace clinicbot.Dialogs.CreateAppoinment
 
         private Activity CreateButtonConfirmation()
         {
-            var reply = MessageFactory.Text("Confirmas la creacion de esta cita medica ?");
+            var reply = MessageFactory.Text("Confirmas la creación de esta cita médica?");
             reply.SuggestedActions = new SuggestedActions()
             {
                 Actions=new List<CardAction>()

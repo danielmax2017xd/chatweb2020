@@ -7,6 +7,7 @@ using clinicbot.infrastructura.Luis;
 using clinicbot.infrastructura.QnAMakerAI;
 using clinicbot.infrastructura.SendGridEmail;
 using clinicbot.Services.Covid19Country;
+using clinicbot.Services.TwilioSMS;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Dialogs;
 using System;
@@ -24,14 +25,17 @@ namespace clinicbot.Dialogs
         private readonly ISendGridEmailService _sendGridEmailService;
         private readonly IQnAMakerAIService  _qnAMakerAIServive;
         private readonly ICovid19CountryService _covid19CountryService;
+        private readonly ITwilioSMSService _twilioSMSService;
 
-        public RootDialog(ILuisService luisService , IDataBaseService dataBaseService, UserState userState, ISendGridEmailService sendGridEmailService, IQnAMakerAIService qnAMakerAIServive, ICovid19CountryService covid19CountryService)
+
+        public RootDialog(ILuisService luisService , IDataBaseService dataBaseService, UserState userState, ISendGridEmailService sendGridEmailService, IQnAMakerAIService qnAMakerAIServive, ICovid19CountryService covid19CountryService, ITwilioSMSService twilioSMSService)
         {
             _qnAMakerAIServive = qnAMakerAIServive;
             _sendGridEmailService = sendGridEmailService;
             _dataBaseService = dataBaseService;
             _luisService = luisService;
             _covid19CountryService = covid19CountryService;
+            _twilioSMSService = twilioSMSService;
             var waterfallSteps = new WaterfallStep[]
             {
                 InitialProcess,
@@ -39,7 +43,7 @@ namespace clinicbot.Dialogs
             };
             AddDialog(new QualificationDialog(_dataBaseService));
             AddDialog(new TestCovidDialog());
-            AddDialog(new CreateAppoinmentDialog(_dataBaseService, userState, _sendGridEmailService , _luisService));
+            AddDialog(new CreateAppoinmentDialog(_dataBaseService, userState, _sendGridEmailService , _luisService, _twilioSMSService));
             AddDialog(new TextPrompt(nameof(TextPrompt)));
 
             AddDialog(new WaterfallDialog(nameof(WaterfallDialog), waterfallSteps));

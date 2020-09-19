@@ -10,6 +10,7 @@ using clinicbot.infrastructura.Luis;
 using clinicbot.infrastructura.QnAMakerAI;
 using clinicbot.infrastructura.SendGridEmail;
 using clinicbot.Services.Covid19Country;
+using clinicbot.Services.TwilioSMS;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -72,6 +73,7 @@ namespace clinicbot
             services.AddSingleton<ISendGridEmailService, SendGridEmailService>();
             services.AddSingleton<ILuisService, LuisService>();
             services.AddSingleton<ICovid19CountryService, Covid19CountryService>();
+            services.AddSingleton<ITwilioSMSService, TwilioSMSService>();
 
             services.AddSingleton< IQnAMakerAIService , QnAMakerAIService>();
             services.AddSingleton<IStorage, MemoryStorage>();

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Eu6gE8jnGakOfelW2mCh7z1tWZPZlPEE8r5RNMDnBmn4MCNY8I9Pv8nv+SSO/hvc94XIiqdo8itvqfa8VfU/Vw==",
+  "dgSpecHash": "2Oe8WQriH+gxaPHjSvJp9s1MEUF2Lt7CUdBtbbC38BmUA8uFb/NuI8NZ8z561agVKdH6lGqgMAUPRhH4nU4Jxg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DANIEL\\Documents\\GitHub\\chatweb2020\\chatweb2020-master\\chatweb2020-master\\clinic\\clinicbot\\clinicbot.csproj",
+  "projectFilePath": "C:\\Users\\DANIEL\\Desktop\\chatweb2020-master\\clinic\\clinicbot\\clinicbot.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DANIEL\\.nuget\\packages\\adaptiveexpressions\\4.10.0\\adaptiveexpressions.4.10.0.nupkg.sha512",
     "C:\\Users\\DANIEL\\.nuget\\packages\\antlr4.runtime\\4.6.6\\antlr4.runtime.4.6.6.nupkg.sha512",
@@ -182,7 +182,8 @@
     "C:\\Users\\DANIEL\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\DANIEL\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\DANIEL\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\DANIEL\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\DANIEL\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\DANIEL\\.nuget\\packages\\twilio\\5.47.0\\twilio.5.47.0.nupkg.sha512"
   ],
   "logs": [
     {

@@ -32,6 +32,7 @@
           "Microsoft.Bot.Builder.Integration.AspNet.Core": "4.9.2",
           "Microsoft.EntityFrameworkCore.Cosmos": "3.1.7",
           "SendGrid": "9.21.0",
+          "Twilio": "5.47.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -2334,6 +2335,23 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
+        }
+      },
+      "Twilio/5.47.0": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Tokens": "5.6.0",
+          "Newtonsoft.Json": "12.0.3",
+          "System.Collections.Specialized": "4.3.0",
+          "System.IdentityModel.Tokens.Jwt": "5.6.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Twilio.dll": {
+            "assemblyVersion": "5.47.0.0",
+            "fileVersion": "5.47.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Twilio.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -5210,6 +5228,13 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "Twilio/5.47.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ExHcexMY5H+Qtdk6MnXfPapTNOpmW5FDmQHMImMTo+GUfjfKabBDbB/bkODJOXTbBFKbKeYHLHefm2aeJnArVA==",
+      "path": "twilio/5.47.0",
+      "hashPath": "twilio.5.47.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
       "type": "referenceassembly",
